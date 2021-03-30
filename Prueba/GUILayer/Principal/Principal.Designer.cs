@@ -150,7 +150,6 @@ namespace Prueba.GUILayer
             // SlidePic
             // 
             this.SlidePic.ErrorImage = null;
-            this.SlidePic.Image = ((System.Drawing.Image)(resources.GetObject("SlidePic.Image")));
             this.SlidePic.ImageLocation = "";
             this.SlidePic.Location = new System.Drawing.Point(245, 73);
             this.SlidePic.Name = "SlidePic";
@@ -186,6 +185,7 @@ namespace Prueba.GUILayer
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrincipal_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.Exit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SlidePic)).EndInit();
             this.ResumeLayout(false);

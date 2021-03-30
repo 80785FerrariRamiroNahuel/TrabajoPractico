@@ -16,9 +16,9 @@ namespace Prueba.GUILayer
         public FrmPrincipal(string user)
         {
             InitializeComponent();
-        }
+            SlidePic.ImageLocation =@"..\Images\2.jpg";
 
-     
+        }
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmClient Client = new FrmClient();
@@ -43,19 +43,22 @@ namespace Prueba.GUILayer
             {
                 imageNumber = 1;
             }
-            prueba = string.Format(@"C:\Users\a\source\repos\Prueba\Prueba\Pictures\Slide\{0}.jpg", imageNumber);
-            SlidePic.ImageLocation = string.Format(@"Images\{0}.jpg", imageNumber);
+            //prueba = string.Format(@"\Images\{0}.jpg", imageNumber);
+            
             imageNumber++;
             
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            LoadNextImage();
-            MessageBox.Show(prueba);
+            //LoadNextImage();
+            //MessageBox.Show(prueba);
            
         }
 
-      
+        private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
