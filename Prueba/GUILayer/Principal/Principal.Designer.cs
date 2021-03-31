@@ -150,7 +150,7 @@ namespace Prueba.GUILayer
             // SlidePic
             // 
             this.SlidePic.ErrorImage = null;
-            this.SlidePic.Image = global::Prueba.Properties.Resources._1;
+            this.SlidePic.Image = ((System.Drawing.Image)(resources.GetObject("SlidePic.Image")));
             this.SlidePic.ImageLocation = "";
             this.SlidePic.InitialImage = global::Prueba.Properties.Resources._1;
             this.SlidePic.Location = new System.Drawing.Point(245, 73);

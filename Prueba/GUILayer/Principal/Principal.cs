@@ -42,7 +42,7 @@ namespace Prueba.GUILayer
             {
                 imageNumber = 1;
             }
-            Image prueba = Image.FromFile(@"Images\" + imageNumber + ".jpg");
+            Image prueba = Image.FromFile(@"..\..\Pictures\Slide\" + imageNumber + ".jpg");
             SlidePic.Image = prueba;
             imageNumber++;
 
