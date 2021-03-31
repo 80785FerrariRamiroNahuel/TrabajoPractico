@@ -19,13 +19,7 @@ namespace Prueba.GUILayer
 
 
         }
-        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FrmClient Client = new FrmClient();
-            Client.Show();
-            
-        }
-
+      
         private void Exit_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Esta Seguro", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -61,6 +55,10 @@ namespace Prueba.GUILayer
             Application.Exit();
         }
 
-       
+        private void BtnClient_Click(object sender, EventArgs e)
+        {
+            FrmClient Client = new FrmClient();
+            Client.ShowDialog();
+        }
     }
 }
