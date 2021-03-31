@@ -152,7 +152,6 @@ namespace Prueba.GUILayer
             this.SlidePic.ErrorImage = null;
             this.SlidePic.Image = ((System.Drawing.Image)(resources.GetObject("SlidePic.Image")));
             this.SlidePic.ImageLocation = "";
-            this.SlidePic.InitialImage = global::Prueba.Properties.Resources._1;
             this.SlidePic.Location = new System.Drawing.Point(245, 73);
             this.SlidePic.Name = "SlidePic";
             this.SlidePic.Size = new System.Drawing.Size(697, 329);
