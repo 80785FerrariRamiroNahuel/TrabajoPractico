@@ -16,7 +16,7 @@ namespace Prueba.GUILayer
         public FrmPrincipal(string user)
         {
             InitializeComponent();
-            SlidePic.ImageLocation =@"..\Images\2.jpg";
+
 
         }
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,23 +36,23 @@ namespace Prueba.GUILayer
 
         }
         private int imageNumber = 1;
-        private string prueba = "a";
         private void LoadNextImage()
         {
             if (imageNumber == 5)
             {
                 imageNumber = 1;
             }
-            //prueba = string.Format(@"\Images\{0}.jpg", imageNumber);
-            
+            Image prueba = Image.FromFile(@"Images\" + imageNumber + ".jpg");
+            SlidePic.Image = prueba;
             imageNumber++;
+
             
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //LoadNextImage();
-            //MessageBox.Show(prueba);
+            LoadNextImage();
+
            
         }
 
@@ -60,5 +60,7 @@ namespace Prueba.GUILayer
         {
             Application.Exit();
         }
+
+       
     }
 }
