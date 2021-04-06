@@ -87,6 +87,7 @@ namespace Prueba.GUILayer
             this.BtnStock.TabIndex = 7;
             this.BtnStock.Text = "Stock";
             this.BtnStock.UseVisualStyleBackColor = false;
+            this.BtnStock.Click += new System.EventHandler(this.BtnStock_Click);
             // 
             // BtnSales
             // 
@@ -102,6 +103,7 @@ namespace Prueba.GUILayer
             this.BtnSales.TabIndex = 6;
             this.BtnSales.Text = "Ventas";
             this.BtnSales.UseVisualStyleBackColor = false;
+            this.BtnSales.Click += new System.EventHandler(this.BtnSales_Click);
             // 
             // BtnPurchases
             // 
@@ -117,6 +119,7 @@ namespace Prueba.GUILayer
             this.BtnPurchases.TabIndex = 8;
             this.BtnPurchases.Text = "Compras";
             this.BtnPurchases.UseVisualStyleBackColor = false;
+            this.BtnPurchases.Click += new System.EventHandler(this.BtnPurchases_Click);
             // 
             // BtnEmployee
             // 
@@ -132,6 +135,7 @@ namespace Prueba.GUILayer
             this.BtnEmployee.TabIndex = 9;
             this.BtnEmployee.Text = "Empleados";
             this.BtnEmployee.UseVisualStyleBackColor = false;
+            this.BtnEmployee.Click += new System.EventHandler(this.BtnEmployee_Click);
             // 
             // BtnReport
             // 
@@ -147,6 +151,7 @@ namespace Prueba.GUILayer
             this.BtnReport.TabIndex = 10;
             this.BtnReport.Text = "Reportes";
             this.BtnReport.UseVisualStyleBackColor = false;
+            this.BtnReport.Click += new System.EventHandler(this.BtnReport_Click);
             // 
             // SlidePic
             // 
@@ -182,6 +187,7 @@ namespace Prueba.GUILayer
             this.Controls.Add(this.BtnClient);
             this.Controls.Add(this.Exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmPrincipal";

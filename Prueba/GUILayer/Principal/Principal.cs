@@ -1,22 +1,37 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
+using Prueba.Entities;
+using Prueba.BusinessLayer;
 using Prueba.GUILayer.ABMC;
+using Prueba.GUILayer.Pucharses;
+using Prueba.GUILayer.Report;
+using Prueba.GUILayer.Stock;
+using Prueba.GUILayer.Sales;
+using Prueba.GUILayer.Employee;
 
 namespace Prueba.GUILayer
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal(string user)
+        private User user;
+        private void ValidateUserPerfil()
+        {
+            if (user.Perfil ==  2)
+            {
+                BtnClient.Enabled = false;
+                BtnEmployee.Enabled = false;
+                BtnPurchases.Enabled = false;
+                BtnReport.Enabled = false;
+
+            }
+        }
+        public FrmPrincipal(User user)
         {
             InitializeComponent();
-
+            this.user = user;
+            ValidateUserPerfil();
 
         }
       
@@ -59,6 +74,36 @@ namespace Prueba.GUILayer
         {
             FrmClient Client = new FrmClient();
             Client.ShowDialog();
+        }
+
+        private void BtnSales_Click(object sender, EventArgs e)
+        {
+            FrmSales Sales = new FrmSales();
+            Sales.ShowDialog();
+        }
+
+        private void BtnStock_Click(object sender, EventArgs e)
+        {
+            FrmStock Stock = new FrmStock();
+            Stock.ShowDialog();
+        }
+
+        private void BtnPurchases_Click(object sender, EventArgs e)
+        {
+            FrmPucharses Pucharses = new FrmPucharses();
+            Pucharses.ShowDialog();
+        }
+
+        private void BtnEmployee_Click(object sender, EventArgs e)
+        {
+            FrmEmployee Employee = new FrmEmployee();
+            Employee.ShowDialog();
+        }
+
+        private void BtnReport_Click(object sender, EventArgs e)
+        {
+            FrmReport Report = new FrmReport();
+            Report.ShowDialog();
         }
     }
 }

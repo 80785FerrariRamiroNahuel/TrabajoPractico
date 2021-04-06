@@ -8,25 +8,46 @@ namespace Prueba.Entities
 {
     public class User
     {
-        private string NameUser;
-        private string Pass;
+        private string codUsu;
+        private string nombreUsuario;
+        private string password;
+        private int perfil;
+        private string dniEmpleado;
 
+        public User()
+        {
+
+        }
         public User(string NameUser, string Pass)
         {
-            this.NameUser = NameUser;
-            this.Pass = Pass;
+            this.nombreUsuario = NameUser;
+            this.password = Pass;
 
         }
-
+        public string CodUsu
+        {
+            get => codUsu;
+            set => codUsu = value;
+        }
         public string nameUser
         {
-            get => NameUser;
-            set => NameUser = value;
+            get => nombreUsuario;
+            set => nombreUsuario = value;
         }
-        public string password
+        public string Password
         {
-            get => Pass;
-            set => Pass = value;
+            get => password;
+            set => password = value;
+        }
+        public  int Perfil
+        {
+            get => perfil;
+            set => perfil = value;
+        }
+        public string DniEmpleado
+        {
+            get => dniEmpleado;
+            set => dniEmpleado = value;
         }
     }
 }

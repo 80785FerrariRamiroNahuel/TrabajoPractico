@@ -29,6 +29,7 @@ namespace Prueba.GUILayer.ABMC
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmABMClient));
             this.BtnClean = new System.Windows.Forms.Button();
             this.BtnSaveClient = new System.Windows.Forms.Button();
             this.TxtNumberDoc = new System.Windows.Forms.MaskedTextBox();
@@ -80,6 +81,7 @@ namespace Prueba.GUILayer.ABMC
             this.TxtNumberDoc.Name = "TxtNumberDoc";
             this.TxtNumberDoc.Size = new System.Drawing.Size(100, 20);
             this.TxtNumberDoc.TabIndex = 64;
+            this.TxtNumberDoc.Text = "41778402";
             this.TxtNumberDoc.ValidatingType = typeof(int);
             // 
             // TxtNumberAddress
@@ -88,6 +90,7 @@ namespace Prueba.GUILayer.ABMC
             this.TxtNumberAddress.Name = "TxtNumberAddress";
             this.TxtNumberAddress.Size = new System.Drawing.Size(100, 20);
             this.TxtNumberAddress.TabIndex = 66;
+            this.TxtNumberAddress.Text = "1948";
             // 
             // LblAddressNumb
             // 
@@ -122,6 +125,7 @@ namespace Prueba.GUILayer.ABMC
             this.TxtMail.Name = "TxtMail";
             this.TxtMail.Size = new System.Drawing.Size(100, 20);
             this.TxtMail.TabIndex = 62;
+            this.TxtMail.Text = "ramiroferrari8@gmail.com";
             // 
             // TxtPhone
             // 
@@ -130,6 +134,7 @@ namespace Prueba.GUILayer.ABMC
             this.TxtPhone.Name = "TxtPhone";
             this.TxtPhone.Size = new System.Drawing.Size(100, 20);
             this.TxtPhone.TabIndex = 60;
+            this.TxtPhone.Text = "3513768883";
             // 
             // TxtAddress
             // 
@@ -137,6 +142,7 @@ namespace Prueba.GUILayer.ABMC
             this.TxtAddress.Name = "TxtAddress";
             this.TxtAddress.Size = new System.Drawing.Size(100, 20);
             this.TxtAddress.TabIndex = 65;
+            this.TxtAddress.Text = "Maria Curie ";
             // 
             // TxtCuit
             // 
@@ -144,6 +150,7 @@ namespace Prueba.GUILayer.ABMC
             this.TxtCuit.Name = "TxtCuit";
             this.TxtCuit.Size = new System.Drawing.Size(100, 20);
             this.TxtCuit.TabIndex = 61;
+            this.TxtCuit.Text = "20-41778402-1";
             // 
             // TxtSurname
             // 
@@ -151,6 +158,7 @@ namespace Prueba.GUILayer.ABMC
             this.TxtSurname.Name = "TxtSurname";
             this.TxtSurname.Size = new System.Drawing.Size(100, 20);
             this.TxtSurname.TabIndex = 59;
+            this.TxtSurname.Text = "Ferrari";
             // 
             // TxtName
             // 
@@ -158,6 +166,7 @@ namespace Prueba.GUILayer.ABMC
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(100, 20);
             this.TxtName.TabIndex = 58;
+            this.TxtName.Text = "Ramiro";
             // 
             // LblAddress
             // 
@@ -267,6 +276,7 @@ namespace Prueba.GUILayer.ABMC
             this.Controls.Add(this.LblPhone);
             this.Controls.Add(this.LblSurname);
             this.Controls.Add(this.LblName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmABMClient";

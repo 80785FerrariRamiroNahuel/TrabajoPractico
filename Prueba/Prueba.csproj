@@ -48,21 +48,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLayer\UserService.cs" />
-    <Compile Include="DataAccesLayer\ConnectionBD.cs" />
     <Compile Include="DataAccesLayer\UserDAO.cs" />
     <Compile Include="Entities\Client.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="GUILayer\ABMC\ABMClient.cs">
+    <Compile Include="GUILayer\Client\ABMClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMC\ABMClient.Designer.cs">
+    <Compile Include="GUILayer\Client\ABMClient.Designer.cs">
       <DependentUpon>ABMClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUILayer\ABMC\Client.cs">
+    <Compile Include="GUILayer\Client\Client.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUILayer\ABMC\Client.Designer.cs">
+    <Compile Include="GUILayer\Client\Client.Designer.cs">
       <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Employee\FrmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Employee\FrmEmployee.Designer.cs">
+      <DependentUpon>FrmEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="GUILayer\Login\Login.cs">
       <SubType>Form</SubType>
@@ -76,12 +81,36 @@
     <Compile Include="GUILayer\Principal\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUILayer\Pucharses\FrmPucharses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Pucharses\FrmPucharses.Designer.cs">
+      <DependentUpon>FrmPucharses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Report\FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Report\FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Sales\FrmSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Sales\FrmSales.Designer.cs">
+      <DependentUpon>FrmSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUILayer\Stock\FrmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUILayer\Stock\FrmStock.Designer.cs">
+      <DependentUpon>FrmStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="GUILayer\ABMC\ABMClient.resx">
+    <EmbeddedResource Include="GUILayer\Client\ABMClient.resx">
       <DependentUpon>ABMClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUILayer\ABMC\Client.resx">
+    <EmbeddedResource Include="GUILayer\Client\Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUILayer\Login\Login.aa.resx">
