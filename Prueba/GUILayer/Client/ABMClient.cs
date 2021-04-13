@@ -37,17 +37,81 @@ namespace Prueba.GUILayer.ABMC
 
         private void BtnSaveClient_Click(object sender, EventArgs e)
         {
-            string name =TxtName.Text;
-            string surname = TxtSurname.Text;
-            string cuit = TxtCuit.Text;
-            string address = TxtAddress.Text;
-            string numberAddress =TxtNumberAddress.Text;
-            string phone = TxtPhone.Text;
-            string numberDocument = TxtNumberDoc.Text;
-            string mail = TxtMail.Text;
-            Client client = new Client(name, surname, phone, cuit, mail, address, numberAddress, numberDocument);
-            MessageBox.Show("Nombre de la persona: " + client.NameClient + client.SurnameClient + client.DocumentClient,"Datos Cliente");
+            if (TxtName.Text != "")
+            {
+                if (TxtSurname.Text != "")
+                {
+                    if (TxtCuit.Text != "")
+                    {
+                        if (TxtAddress.Text != "")
+                        {
+                            if (TxtNumberAddress.Text != "")
+                            {
+                                if (TxtNumberDoc.Text != "")
+                                {
+                                    string name = TxtName.Text;
+                                    string surname = TxtSurname.Text;
+                                    string phone = TxtPhone.Text;
+                                    string cuit = TxtCuit.Text;
+                                    string mail = TxtMail.Text;
+                                    string tipoDocumento = CmbTypeDoc.GetItemText(CmbTypeDoc.SelectedItem);
+                                    string numberDocument = TxtNumberDoc.Text;
+                                    string address = TxtAddress.Text;
+                                    string numberAddress = TxtNumberAddress.Text;
+                                    string district = CmbDistrict.GetItemText(CmbDistrict.SelectedItem);
+                                    Client client = new Client(name, surname, phone, cuit, mail, tipoDocumento, numberDocument, address, numberAddress, district);
+                                    AddClient(client);
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("ingrese un numero de Documento");
+                                    TxtNumberDoc.Focus();
+                                }
+
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("ingrese un Numero de direccion");
+                                TxtNumberAddress.Focus();
+                            }
+
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("ingrese una Direccion");
+                            TxtAddress.Focus();
+                        }
+
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("ingrese un Cuit");
+                        TxtCuit.Focus();
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("ingrese un Apellido");
+                    TxtSurname.Focus();
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("ingrese un nombre");
+                TxtName.Focus();
+            }
+
         }
+    
 
         private void FrmABMClient_Load(object sender, EventArgs e)
         {

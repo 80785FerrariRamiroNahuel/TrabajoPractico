@@ -32,7 +32,7 @@ namespace Prueba.GUILayer
             InitializeComponent();
             this.user = user;
             ValidateUserPerfil();
-
+            PnlPrueba.Visible = false;
         }
       
         private void Exit_Click(object sender, EventArgs e)
@@ -64,7 +64,18 @@ namespace Prueba.GUILayer
 
            
         }
-
+        public void AbrirFormInPanel1(object formHijo)
+        {
+            if (this.PnlPrueba.Controls.Count > 0)
+                this.PnlPrueba.Controls.RemoveAt(0);
+            Form fh = formHijo as Form;
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.PnlPrueba.Controls.Add(fh);
+            this.PnlPrueba.Tag = fh;
+            fh.Show();
+        }
         private void FrmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
@@ -72,8 +83,10 @@ namespace Prueba.GUILayer
 
         private void BtnClient_Click(object sender, EventArgs e)
         {
+            PnlPrueba.Visible = true;
             FrmClient Client = new FrmClient();
-            Client.ShowDialog();
+            AbrirFormInPanel1(Client);
+            //Client.ShowDialog();
         }
 
         private void BtnSales_Click(object sender, EventArgs e)
